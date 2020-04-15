@@ -1,44 +1,24 @@
 import { createAction, props } from "@ngrx/store";
 import { BookModel } from "src/app/shared/models";
 
-// const actionGroup = '[Books API]'
-
-// export const booksLoaded = createAction(
-//   `{actionGroup} Books Loaded Success`,
-//   props<{ books: BookModel[]}>()
-// );
-
-// export const bookCreated = createAction(
-//   `{actionGroup} Book Created`,
-//   props<{ book: BookModel }>()
-// );
-
-// export const bookUpdated = createAction(
-//   `{actionGroup} Book Updated`,
-//   props<{ book: BookModel }>()
-// );
-
-// export const bookDeleted = createAction(
-//   `{actionGroup} Book Deleted`,
-//   props<{ bookId: string }>()
-// );
+const actionGroup = '[Books API]'
 
 export const booksLoaded = createAction(
-  '[Books API] Books Loaded Success',
+  `{actionGroup} Books Loaded Success`,
   props<{ books: BookModel[]}>()
 );
 
 export const bookCreated = createAction(
-  '[Books API] Book Created',
+  `{actionGroup} Book Created`,
   props<{ book: BookModel }>()
 );
 
 export const bookUpdated = createAction(
-  '[Books API] Book Updated',
+  `{actionGroup} Book Updated`,
   props<{ book: BookModel }>()
 );
 
 export const bookDeleted = createAction(
-  '[Books API] Book Deleted',
+  `{actionGroup} Book Deleted`,
   props<{ bookId: string }>()
 );
